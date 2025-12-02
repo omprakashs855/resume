@@ -4,56 +4,116 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Om Prakash Singh — Resume</title>
-  <link rel="stylesheet" href="styles.css">
-  <meta name="description" content="Resume / portfolio of Om Prakash Singh.">
+  <meta name="description" content="Resume / portfolio of Om Prakash Singh." />
+  <link rel="stylesheet" href="styles.css" />
 </head>
-<body class="light">
-  <header class="topbar">
-    <div class="brand">
-      <h1>Om Prakash Singh</h1>
-      <p class="sub">Senior Engineer — Software, DevOps & Test Automation</p>
+<body>
+  <!-- TOPBAR -->
+  <header class="topbar" role="banner">
+    <div class="topbar-inner">
+      <div class="brand" aria-hidden="false">
+        <h1 class="name">Om Prakash Singh</h1>
+        <p class="title">Senior Engineer — Software • DevOps • Test Automation</p>
+      </div>
+
+      <!-- Desktop Nav -->
+      <nav class="nav desktop-nav" role="navigation" aria-label="Main navigation">
+        <ul>
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#profile">Profile</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#certs">Certifications & Personal</a></li>
+        </ul>
+      </nav>
+
+      <!-- Mobile Menu Button -->
+      <button id="menuToggle" class="icon-btn mobile-only" aria-label="Open menu" aria-expanded="false">☰</button>
+
+      <div class="controls">
+        <button id="themeToggle" class="icon-btn" aria-pressed="false" aria-label="Toggle color theme">🌙</button>
+      </div>
     </div>
-    <div class="controls">
-      <button id="themeToggle" aria-label="Toggle theme">🌙</button>
-    </div>
+
+    <!-- Mobile Nav -->
+    <nav class="nav mobile-nav" id="mobileNav" aria-hidden="true">
+      <ul>
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#profile">Profile</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#certs">Certifications & Personal</a></li>
+      </ul>
+    </nav>
   </header>
 
-  <main class="container">
-    <section class="hero card reveal">
-      <div class="hero-left">
-        <h2>Hello — I'm Om Prakash Singh.</h2>
-        <p class="lead">Experienced in Python, Django, DevOps, Test Automation, Containerization and building secure key management solutions.</p>
-        <p class="contact">
-          <span>📧 <a href="mailto:omprakashs855@gmail.com">omprakashs855@gmail.com</a></span>
-          <span>📞 +91 6204921841</span>
-          <span>🔗 <a href="https://www.linkedin.com/in/omprakashs855" target="_blank" rel="noopener">https://www.linkedin.com/in/omprakashs855</a></span>
-        </p>
-        <p><a class="cta" href="Om_Prakash_Singh_R.pdf" download>Download Resume (PDF)</a></p>
-      </div>
-      <div class="hero-right">
-        <div class="stat">
-          <h3>Key expertise</h3>
-          <ul>
-            <li>Unikey KMS & Client Onboarding</li>
-            <li>Playwright Async & REST API automation</li>
-            <li>Docker, Jenkins, Cloud Foundry, Grafana</li>
-            <li>Django, PostgreSQL, Sphinx automation</li>
-          </ul>
+  <!-- MAIN -->
+  <main class="container" id="mainContent">
+    <!-- HERO -->
+    <section id="hero" class="panel card reveal">
+      <div class="hero-grid">
+        <div class="hero-left">
+          <h2>Hello — I'm <span class="accent">Om Prakash Singh</span>.</h2>
+          <p class="lead">Experienced in Python, Django, DevOps, Test Automation, Containerization and building secure key management solutions.</p>
+
+          <p class="contact">
+            <span>📧 <a href="mailto:omprakashs855@gmail.com">omprakashs855@gmail.com</a></span>
+            <span>📞 +91 6204921841</span>
+            <span>🔗 <a href="https://www.linkedin.com/in/omprakashs855" target="_blank" rel="noopener">linkedin.com/in/omprakashs855</a></span>
+          </p>
+
+          <p class="actions">
+            <a class="btn primary" href="Om_Prakash_Singh_R.pdf" download>Download Resume (PDF)</a>
+          </p>
         </div>
+
+        <aside class="hero-right">
+          <div class="card stat">
+            <h3>Key expertise</h3>
+            <ul>
+              <li>Python and SQL</li>
+              <li>Pytest and REST API Automation</li>
+              <li>Docker Containerization, DevOps, Grafana</li>
+              <li>Django, PostgreSQL, Sphinx Doc</li>
+            </ul>
+          </div>
+        </aside>
       </div>
     </section>
 
-    <section id="experience" class="card reveal">
+    <!-- PROFILE SYNOPSIS -->
+    <section id="profile" class="panel card reveal">
+      <h2>Profile Synopsis</h2>
+      <ol class="profile-list">
+        <li>Led Unikey Client Onboarding within the Mercedes domain, enabling secure key creation and utilization via Unikey REST APIs for signing and encryption operations. (<em>Unikey: Team name</em>)</li>
+        <li>Served as Concept Owner for the Unikey Key Management System (KMS UI) — a self-service portal facilitating project creation and complete key lifecycle operations (create, import, export, delete) as well the Users RBAC.</li>
+        <li>Authored POC and MVP documentation, aligning Security Architects across India and Germany, and secured approval to initiate full-scale development.</li>
+        <li>Defined Feature Specifications and Test Acceptance Criteria, supporting development and testing under Lean and Agile methodologies.</li>
+        <li>Built GUI automation (Playwright Async) and REST API validation frameworks to monitor Unikey service health and handle Bad ECU Certificate scenarios.</li>
+        <li>Designed and implemented a socket-based multi-user solution for Harbor image pushes and Cloud Foundry deployments, eliminating credential sharing and improving security.</li>
+        <li>Developed and maintained an on-premises Jenkins CI/CD pipeline, automating end-to-end deployment and testing workflows.</li>
+        <li>Containerized a Django-based ETL backend with PostgreSQL and Grafana, leveraging Harbor for image storage and Cloud Foundry for PaaS deployment.</li>
+        <li>Created Grafana dashboards and Django-based UIs to visualize metrics, automate Sphinx documentation, and streamline report generation.</li>
+        <li>Automated integration and HIL testing using Vector Canoe, Debugger and SSH APIs; centralized all test results into a unified Grafana dashboard for monitoring and analysis.</li>
+      </ol>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section id="experience" class="panel card reveal">
       <h2>Professional Experience</h2>
 
       <article class="job">
-        <h3>Senior Engineer — Mercedes‑Benz Research & Development (MBRDI)</h3>
+        <h3>Senior Engineer — Mercedes-Benz Research & Development (MBRDI)</h3>
         <p class="muted">Jan 2024 – Present | Bengaluru, India</p>
         <ul>
           <li>Led Unikey client onboarding and built Unikey Key Management System (KMS UI) — project creation & full key lifecycle management.</li>
           <li>Authored POC & MVP docs; aligned security architects across India & Germany to move the project to development.</li>
           <li>Developed GUI automation (Playwright Async) and REST tests to monitor service health and certificate scenarios.</li>
           <li>Built socket-based multi-user solution for secure Harbor pushes and Cloud Foundry deployments.</li>
+          <li>Developed and maintained on-prem Jenkins CI/CD automation for deployments and tests.</li>
+          <li>Containerized Django ETL backend with PostgreSQL and Grafana; used Harbor and Cloud Foundry for deployment.</li>
         </ul>
       </article>
 
@@ -61,27 +121,41 @@
         <h3>Senior Software Engineer — Bosch Global Software Technologies (BGSW)</h3>
         <p class="muted">Aug 2019 – Dec 2023 | Bengaluru, India</p>
         <ul>
-          <li>Django-driven data models, Sphinx automation, Grafana dashboards and Docker packaging for Ford ACP projects.</li>
-          <li>Automated integration & HIL testing using Vector Canoe and centralized checks via Jenkins dashboards for Daimler IDC5.</li>
+          <li>Demonstrated expertise in the creation, implementation, and upkeep of automated test scripts and frameworks, employing Python and SQL. Proficient in data ETL processes handling JSON, XML, and CSV with pandas, NumPy and Jinja templating.</li>
+          <li>AWS Certified Cloud Practitioner; worked with Jenkins-driven CI/CD pipelines and AWS EC2 for data processing and hosting; S3 for static content.</li>
+          <li>Proficient in Git for version control & release management; skilled in Grafana for dashboards and Sphinx for documentation automation.</li>
+          <li>Experienced in Docker containerization and Django backend development; collaborated across teams under Agile/Scrum.</li>
+          <li>Automated integration & HIL testing using Vector Canoe, Debugger & SSH APIs; centralized test results into Grafana dashboards.</li>
         </ul>
       </article>
     </section>
 
-    <section id="skills" class="card reveal">
+    <!-- SKILLS -->
+    <section id="skills" class="panel card reveal">
       <h2>Skills & Tools</h2>
-      <div class="chips">
-        <span>Python</span><span>Django</span><span>Playwright</span><span>REST API</span><span>Docker</span>
-        <span>Jenkins</span><span>Grafana</span><span>PostgreSQL</span><span>AWS</span><span>Azure</span>
+      <div class="chips" role="list">
+        <span role="listitem">Python</span>
+        <span role="listitem">Django</span>
+        <span role="listitem">Playwright</span>
+        <span role="listitem">REST API</span>
+        <span role="listitem">Docker</span>
+        <span role="listitem">Jenkins</span>
+        <span role="listitem">Grafana</span>
+        <span role="listitem">PostgreSQL</span>
+        <span role="listitem">AWS</span>
+        <span role="listitem">Sphinx</span>
       </div>
     </section>
 
-    <section id="education" class="card reveal">
+    <!-- EDUCATION -->
+    <section id="education" class="panel card reveal">
       <h2>Education</h2>
-      <p><strong>B.E. (ECE)</strong> — Dayananda Sagar College of Engineering, Bengaluru (Autonomous, VTU) — 2015‑2019 — CGPA 8.97</p>
-      <p><strong>12th</strong> — Jamshedpur Public School — 88% | <strong>10th</strong>  — Jamshedpur Public School — 9.4 CGPA</p>
+      <p><strong>B.E. (ECE)</strong> — Dayananda Sagar College of Engineering, Bengaluru (Autonomous, VTU) — 2015-2019 — CGPA 8.97</p>
+      <p><strong>12th</strong> — Jamshedpur Public School — 88% | <strong>10th</strong> — Jamshedpur Public School — 9.4 CGPA</p>
     </section>
 
-    <section id="certs" class="card reveal">
+    <!-- CERTIFICATIONS -->
+    <section id="certs" class="panel card reveal">
       <h2>Certifications</h2>
       <ul>
         <li>ISTQB Certified Tester Foundation Level — Indian Testing Board (Oct 2025).</li>
@@ -91,17 +165,22 @@
       </ul>
     </section>
 
-    <section id="personal" class="card reveal">
+    <!-- PERSONAL -->
+    <section id="personal" class="panel card reveal">
       <h2>Personal</h2>
       <p><strong>Languages:</strong> English, Hindi, German (A1)</p>
       <p><strong>DOB:</strong> 20 August 1997</p>
       <p><strong>Address:</strong> Flat No 740, Bara Flat, Sidhgoda, PO-Agrico, Near SDSM School, Jamshedpur – 831009</p>
     </section>
-
-    <footer class="footer">
-      <p class="small">Tip: Toggle theme (top-right) and to change theme</p>
-    </footer>
   </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container small">
+      <p>Tip: Use the theme button in the top-right to toggle light/dark mode.</p>
+      <p class="small">© Om Prakash Singh</p>
+    </div>
+  </footer>
 
   <script src="script.js"></script>
 </body>
